@@ -41,6 +41,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'jgdavey/vim-blockle'
 Plugin 'vim-scripts/tComment'
 Plugin 'scrooloose/syntastic'
+Plugin 'parkr/vim-jekyll'
 
 " File Browser Plugin
 Plugin 'scrooloose/nerdtree'
@@ -65,7 +66,10 @@ set nowrap
 set autoindent
 set bg=light
 set number
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard=unnamed
+endif
+" set clipboard=unnamed
 " Other Mappings
 
 " Navigation around windows
@@ -104,7 +108,3 @@ map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
 
 " Seed data
 map <Leader>z :!rake db:seed
-
-map <Leader>j ]m
-map <Leader>k [m 
-
