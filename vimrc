@@ -58,6 +58,9 @@ filetype plugin indent on    " required
 syntax enable
 " colorscheme monokai
 
+" Make VIM faster
+set synmaxcol=150
+
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
