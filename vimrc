@@ -27,6 +27,7 @@ Plugin 'kien/ctrlp.vim'
 " TMUX PLUGINS
 
 Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-surround'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'christoomey/vim-tmux-navigator'
 
@@ -72,6 +73,7 @@ set number
 if $TMUX == ''
   set clipboard=unnamed
 endif
+
 " set clipboard=unnamed
 " Other Mappings
 
@@ -111,3 +113,7 @@ map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
 
 " Seed data
 map <Leader>z :!rake db:seed
+
+" Quit all windows shortcut
+map <Leader>x :qa<CR>
+map <Leader>X :wqa<CR>
