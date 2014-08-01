@@ -14,6 +14,10 @@ Plugin 'gmarik/Vundle.vim'
 " Look and Feel Plugin
 Plugin 'sickill/vim-monokai'
 
+" Markdown Plugin
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 " Plugins
 Plugin 'ervandew/supertab' 
 Plugin 'vim-scripts/vim-auto-save'
