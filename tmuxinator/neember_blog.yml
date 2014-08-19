@@ -1,0 +1,10 @@
+# ~/.tmuxinator/neember_blog.yml
+
+name: neember_blog
+root: ~/workspace/neember_blog
+
+windows:
+  - editor: vim
+  - guard: guard
+  - server: jekyll serve
+

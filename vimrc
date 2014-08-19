@@ -25,7 +25,7 @@ let g:auto_save = 1
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'Yggdroot/indentLine'
+" Plugin 'Yggdroot/indentLine'
 Plugin 'kien/ctrlp.vim'
 
 " TMUX PLUGINS
@@ -74,11 +74,12 @@ set nowrap
 set autoindent
 set bg=light
 set number
-if $TMUX == ''
-  set clipboard=unnamed
-endif
 
-" set clipboard=unnamed
+" Get rid of 70's technologies
+set nobackup
+set noswapfile
+
+set clipboard=unnamed
 " Other Mappings
 
 " Navigation around windows
@@ -114,9 +115,6 @@ let g:rspec_runner = "os_x_iterm"
 
 " convert ruby hash from :abc => '123' to abc: '123'
 map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
-
-" Seed data
-map <Leader>z :!rake db:seed
 
 " Quit all windows shortcut
 map <Leader>x :qa<CR>
