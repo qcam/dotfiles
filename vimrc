@@ -60,6 +60,17 @@ let g:indentLinerchar = '|'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Personalise my VIM
+let &titlestring = "Jack's VIM"
+if &term == "screen"
+  set t_ts=^[k
+  set t_fs=^[\
+endif
+
+if &term == "screen" || &term == "xterm"
+  set title
+endif
+
 syntax enable
 " colorscheme monokai
 
