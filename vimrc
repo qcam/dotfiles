@@ -19,34 +19,37 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " Plugins
-Plugin 'ervandew/supertab' 
 Plugin 'vim-scripts/vim-auto-save'
 let g:auto_save = 1
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-" Plugin 'Yggdroot/indentLine'
-Plugin 'kien/ctrlp.vim'
-
-" TMUX PLUGINS
-
+Plugin 'kien/ctrlp.vim' "Ctrl + p to find your file
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'vim-scripts/tComment'
+Plugin 'ervandew/supertab' 
 
 let g:rspec_command = "Dispatch rspec {spec}"
 
-" Coding Plugins
+" Ruby Plugins
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-endwise'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'jgdavey/vim-blockle'
-Plugin 'vim-scripts/tComment'
-Plugin 'scrooloose/syntastic'
+Bundle 'thoughtbot/vim-rspec'
+
+" Coffee Script Plugin
+Plugin 'kchmck/vim-coffee-script'
+
+" SCSS Plugin
+Plugin 'cakebaker/scss-syntax.vim'
+
+" Jekyll Plugin
 Plugin 'parkr/vim-jekyll'
+
+" Template Engine Plugins
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-haml'
 
 " File Browser Plugin
 Plugin 'scrooloose/nerdtree'
@@ -54,11 +57,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 
-let g:indentLine_color_term = 100 
-let g:indentLinerchar = '|'
-
 call vundle#end()            " required
-filetype plugin indent on    " required
 
 " Personalise my VIM
 let &titlestring = "Jack's VIM"
@@ -75,7 +74,7 @@ syntax enable
 " colorscheme monokai
 
 " Make VIM faster
-set synmaxcol=150
+set synmaxcol=100
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -101,14 +100,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-R> <C-W><C-X>
 nnoremap <C-R> <C-W><C-X>
 nnoremap <C-=> <C-W>|
-map + :vertical res +1<CR>
-map - :vertical res -1<CR>
+
 " *****************************************
 " "     Leader Mappings
 " " *****************************************
-
 let mapleader = " "
-
 " opens NerdTree
 map <Leader>n :NERDTreeToggle<CR> 
 
@@ -130,3 +126,10 @@ map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
 " Quit all windows shortcut
 map <Leader>x :qa<CR>
 map <Leader>X :wqa<CR>
+
+" Change VIM insert cursor
+if &term =~ '^xterm'
+  let &t_SI .= "\<Esc>[6 q"
+  let &t_EI .= "\<Esc>[1 q"
+endif
+
