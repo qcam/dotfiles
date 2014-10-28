@@ -2,12 +2,10 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # Add RVM to PATH
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-# export PATH="$HOME/.bin:$PATH"
-# export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 # Import colors
 autoload -U colors && colors
@@ -29,15 +27,12 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Set VIM as my default editor
 export EDITOR='vim'
-# alias vim='/Applications/MacVim.app/Contents/MacOS/vim'
 
 # Zsh-completions path
 fpath=(~/zsh-completions/src $fpath)
 
 export PATH="$PATH:/usr/local/lib/node_modules"
 source $(brew --prefix nvm)/nvm.sh
-
-
 
 export TERM=xterm
 
@@ -47,10 +42,12 @@ zstyle :compinstall filename '/Users/jahuang/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-#
+
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/jahuang/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables bash completion for gcloud.
 source '/Users/jahuang/google-cloud-sdk/completion.zsh.inc'
-# The following lines were added by compinstall
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
