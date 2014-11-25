@@ -32,25 +32,27 @@ Plugin 'ervandew/supertab'
 
 let g:rspec_command = "Dispatch rspec {spec}"
 
+Plugin 'sheerun/vim-polyglot'
+
 " Ruby Plugins
 Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
+" Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
 Plugin 'jgdavey/vim-blockle'
 Bundle 'thoughtbot/vim-rspec'
 
 " Coffee Script Plugin
-Plugin 'kchmck/vim-coffee-script'
+" Plugin 'kchmck/vim-coffee-script'
 
 " SCSS Plugin
-Plugin 'cakebaker/scss-syntax.vim'
+" Plugin 'cakebaker/scss-syntax.vim'
 
 " Jekyll Plugin
 Plugin 'parkr/vim-jekyll'
 
 " Template Engine Plugins
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-haml'
+" Plugin 'slim-template/vim-slim'
+" Plugin 'tpope/vim-haml'
 
 " File Browser Plugin
 Plugin 'scrooloose/nerdtree'
