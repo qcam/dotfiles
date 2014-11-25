@@ -17,6 +17,7 @@ Plugin 'sickill/vim-monokai'
 " Markdown Plugin
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'wakatime/vim-wakatime'
 
 " Plugins
 Plugin 'vim-scripts/vim-auto-save'
@@ -108,9 +109,6 @@ let mapleader = " "
 " opens NerdTree
 map <Leader>n :NERDTreeToggle<CR> 
 
-" reloads $MYVIMRC
-map <Leader>r :so $MYVIMRC<cr>
-
 " *********************************
 " RSPEC VIM MAPPING
 " *********************************
@@ -126,6 +124,7 @@ map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
 " Quit all windows shortcut
 map <Leader>x :qa<CR>
 map <Leader>X :wqa<CR>
+map <Leader>' cs"'
 
 " Change VIM insert cursor
 if &term =~ '^xterm'
