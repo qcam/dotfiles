@@ -32,7 +32,7 @@ export EDITOR='vim'
 fpath=(~/zsh-completions/src $fpath)
 
 export PATH="$PATH:/usr/local/lib/node_modules"
-source $(brew --prefix nvm)/nvm.sh
+# source $(brew --prefix nvm)/nvm.sh
 
 export TERM=xterm
 
@@ -44,10 +44,10 @@ compinit
 # End of lines added by compinstall
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/jahuang/google-cloud-sdk/path.zsh.inc'
+# source '/Users/jahuang/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables bash completion for gcloud.
-source '/Users/jahuang/google-cloud-sdk/completion.zsh.inc'
+# source '/Users/jahuang/google-cloud-sdk/completion.zsh.inc'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
