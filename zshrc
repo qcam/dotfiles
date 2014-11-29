@@ -44,12 +44,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# The next line updates PATH for the Google Cloud SDK.
-# source '/Users/jahuang/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables bash completion for gcloud.
-# source '/Users/jahuang/google-cloud-sdk/completion.zsh.inc'
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
