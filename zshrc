@@ -27,6 +27,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Set VIM as my default editor
 export EDITOR='vim'
+alias vim='/usr/local/Cellar/vim/7.4.488/bin/vim'
 
 # Zsh-completions path
 fpath=(~/zsh-completions/src $fpath)
@@ -51,3 +52,6 @@ compinit
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
