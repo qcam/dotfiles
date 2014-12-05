@@ -27,13 +27,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Set VIM as my default editor
 export EDITOR='vim'
-alias vim='/usr/local/Cellar/vim/7.4.488/bin/vim'
+alias vim='/usr/local/opt/vim/bin/vim'
 
 # Zsh-completions path
 fpath=(~/zsh-completions/src $fpath)
 
 export PATH="$PATH:/usr/local/lib/node_modules"
-# source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix nvm)/nvm.sh
 
 export TERM=xterm
 
