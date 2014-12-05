@@ -20,6 +20,7 @@ let g:auto_save = 1
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kien/ctrlp.vim' "Ctrl + p to find your file
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/tComment'
