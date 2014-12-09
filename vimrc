@@ -27,7 +27,6 @@ Plugin 'vim-scripts/tComment'
 Plugin 'ervandew/supertab' 
 
 let g:rspec_command = "Dispatch rspec {spec}"
-
 Plugin 'sheerun/vim-polyglot'
 
 " Ruby Plugins
@@ -111,6 +110,8 @@ map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
 " Quit all windows shortcut
 map <Leader>x :qa<CR>
 map <Leader>X :wqa<CR>
+
+" String double quote to single
 map <Leader>' cs"'
 
 " Change VIM insert cursor
