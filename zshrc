@@ -4,8 +4,8 @@ export LANG=en_US.UTF-8
 
 # Add RVM to PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$HOME/.bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:/usr/local/bin"
 
 # Import colors
 autoload -U colors && colors
@@ -48,4 +48,4 @@ compinit
 
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:/usr/local/heroku/bin"

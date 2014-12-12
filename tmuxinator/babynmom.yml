@@ -1,16 +1,13 @@
-# ~/.tmuxinator/dadadee.yml
+# ~/.tmuxinator/rspec_example.yml
 
-name: dadadee
-root: ~/workspace/dadadee
+name: babynmom
+root: ~/workspace/babynmom
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
-
-# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
+pre: workon babynmom
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -19,6 +16,6 @@ root: ~/workspace/dadadee
 # tmux_command: byobu
 
 windows:
+  - something: git status
   - editor: vim
-  - server: bundle exec rails s
-  - logs: tail -f log/development.log
+  - server: workon babynmom && python application.py

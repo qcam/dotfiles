@@ -11,9 +11,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Markdown Plugin
-Plugin 'wakatime/vim-wakatime'
-
 " Plugins
 Plugin 'vim-scripts/vim-auto-save'
 let g:auto_save = 1
