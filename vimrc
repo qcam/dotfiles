@@ -43,17 +43,6 @@ let g:NERDTreeAutoDeleteBuffer = 1
 
 call vundle#end()            " required
 
-" Personalise my VIM
-let &titlestring = "Jack's VIM"
-if &term == "screen"
-  set t_ts=^[k
-  set t_fs=^[\
-endif
-
-if &term == "screen" || &term == "xterm"
-  set title
-endif
-
 syntax enable
 " colorscheme monokai
 
@@ -73,8 +62,10 @@ set number
 set nobackup
 set noswapfile
 
+" Make backspace works like normal
+set backspace=indent,eol,start
+
 set clipboard=unnamed
-" Other Mappings
 
 " Navigation around windows
 nnoremap <C-L> <C-W><C-L>
