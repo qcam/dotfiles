@@ -47,13 +47,14 @@ syntax enable
 " colorscheme monokai
 
 " Make VIM faster
-set synmaxcol=100
+set synmaxcol=150
 
+set nowrap
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set nowrap
+set wrap
 set autoindent
 set bg=light
 set number
@@ -91,6 +92,8 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm"
+" RSpec.vim mappings
+autocmd FileType qf setlocal wrap linebreak
 
 " convert ruby hash from :abc => '123' to abc: '123'
 map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
