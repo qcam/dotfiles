@@ -11,10 +11,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-" Plugins
-Plugin 'vim-scripts/vim-auto-save'
-let g:auto_save = 1
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kien/ctrlp.vim' "Ctrl + p to find your file
@@ -36,6 +32,9 @@ Bundle 'thoughtbot/vim-rspec'
 " Jekyll Plugin
 Plugin 'parkr/vim-jekyll'
 
+" Multiple Cursors
+Plugin 'terryma/vim-multiple-cursors'
+
 " File Browser Plugin
 Plugin 'scrooloose/nerdtree'
 let g:NERDTreeShowHidden = 1
@@ -50,13 +49,21 @@ syntax enable
 " Make VIM faster
 set synmaxcol=150
 
-set wrap
+" Auto write file when switch buffers
+set autowrite
+
+"Never wrap the text 
+set nowrap
+
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set wrap
+
+" Auto indentation
 set autoindent
+
+" Light Background
 set bg=light
 set number
 
@@ -80,16 +87,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-R> <C-W><C-X>
 nnoremap <C-R> <C-W><C-X>
 nnoremap <C-=> <C-W>|
-
-if has("multi_byte")
-  if &termencoding == ""
-    let &termencoding = &encoding
-  endif
-  set encoding=utf-8
-  setglobal fileencoding=utf-8
-  "setglobal bomb
-  set fileencodings=ucs-bom,utf-8,latin1
-endif
 
 " *****************************************
 " "     Leader Mappings
