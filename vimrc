@@ -50,7 +50,7 @@ syntax enable
 " Make VIM faster
 set synmaxcol=150
 
-set nowrap
+set wrap
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -59,6 +59,9 @@ set wrap
 set autoindent
 set bg=light
 set number
+
+" Use UTF-8 without BOM
+set encoding=utf-8 nobomb
 
 " Get rid of 70's technologies
 set nobackup
