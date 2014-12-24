@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+filetype plugin indent on
 
 " For ruby block selecting
 runtime macros/matchit.vim
@@ -76,6 +77,16 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-R> <C-W><C-X>
 nnoremap <C-R> <C-W><C-X>
 nnoremap <C-=> <C-W>|
+
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
 
 " *****************************************
 " "     Leader Mappings

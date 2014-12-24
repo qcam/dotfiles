@@ -16,6 +16,8 @@ pre: workon babynmom
 # tmux_command: byobu
 
 windows:
-  - something: git status
   - editor: vim
-  - server: workon babynmom && python application.py
+  - console: workon babynmom
+  - server: 
+    - workon babynmom 
+    - python application.py
