@@ -20,11 +20,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/tComment'
 Plugin 'ervandew/supertab' 
 
-let g:rspec_command = "Dispatch rspec {spec}"
+let g:rspec_command = "Dispatch rspec -I . --color -f p {spec}"
+
+" For polygloting programming
 Plugin 'sheerun/vim-polyglot'
 
 " Ruby Plugins
 Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
 Plugin 'jgdavey/vim-blockle'
 Bundle 'thoughtbot/vim-rspec'
@@ -48,12 +51,18 @@ syntax enable
 
 " Make VIM faster
 set synmaxcol=150
-
 " Auto write file when switch buffers
 set autowrite
 
 "Never wrap the text 
 set nowrap
+
+" Make VIM not to stupidly smart
+set formatoptions-=or
+
+" Wild menu
+set wildmenu
+set wildmode=full
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -99,7 +108,7 @@ map <Leader>n :NERDTreeToggle<CR>
 " RSPEC VIM MAPPING
 " *********************************
 map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>r :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm"
@@ -112,6 +121,11 @@ map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
 " Quit all windows shortcut
 map <Leader>x :qa<CR>
 map <Leader>X :wqa<CR>
+map <Leader>s :w<CR>
+map <Leader>q :wq<CR>
+
+map <Leader>d yyp
+map <Leader><CR> cit<CR><esc>ko
 
 " String double quote to single
 map <Leader>' cs"'
