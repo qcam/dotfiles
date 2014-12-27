@@ -19,8 +19,14 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/tComment'
 Plugin 'ervandew/supertab' 
+Plugin 'jiangmiao/auto-pairs' 
 
-let g:rspec_command = "Dispatch rspec -I . --color -f p {spec}"
+" Auto-save
+Plugin 'vim-scripts/vim-auto-save'
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+" Disable auto-save in Python
+autocmd FileType python let g:auto_save=0
 
 " For polygloting programming
 Plugin 'sheerun/vim-polyglot'
@@ -51,10 +57,8 @@ syntax enable
 
 " Make VIM faster
 set synmaxcol=150
-" Auto write file when switch buffers
-set autowrite
 
-"Never wrap the text 
+" Never wrap the text 
 set nowrap
 
 " Make VIM not to stupidly smart
@@ -101,6 +105,7 @@ nnoremap <C-=> <C-W>|
 " "     Leader Mappings
 " " *****************************************
 let mapleader = " "
+
 " opens NerdTree
 map <Leader>n :NERDTreeToggle<CR> 
 
@@ -116,7 +121,8 @@ let g:rspec_runner = "os_x_iterm"
 autocmd FileType qf setlocal wrap linebreak
 
 " convert ruby hash from :abc => '123' to abc: '123'
-map <Leader>h :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
+map <Leader>h :s/:\([^=,'"]*\) =>/\1:/g"']<CR>
+map <Leader>H :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
 
 " Quit all windows shortcut
 map <Leader>x :qa<CR>
@@ -129,10 +135,4 @@ map <Leader><CR> cit<CR><esc>ko
 
 " String double quote to single
 map <Leader>' cs"'
-
-" Change VIM insert cursor
-if &term =~ '^xterm'
-  let &t_SI .= "\<Esc>[6 q"
-  let &t_EI .= "\<Esc>[1 q"
-endif
 

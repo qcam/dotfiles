@@ -20,7 +20,10 @@ root: ~/workspace/hr
 
 windows:
   - editor: vim
-  - server: bundle exec rails s
-  - console: bunlde exec rails c
+  - server: 
+      layout: main-vertical
+      panes: 
+        - bundle exec rails s
+  - console: bundle exec rails c
   - git: git status
 
