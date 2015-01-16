@@ -117,6 +117,7 @@ map <Leader>r :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = "Dispatch rspec -I . --color -f p {spec}"
 " RSpec.vim mappings
 autocmd FileType qf setlocal wrap linebreak
 
@@ -135,4 +136,5 @@ map <Leader><CR> cit<CR><esc>ko
 
 " String double quote to single
 map <Leader>' cs"'
+
 
