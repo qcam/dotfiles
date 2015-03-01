@@ -20,6 +20,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/tComment'
 Plugin 'ervandew/supertab' 
 Plugin 'jiangmiao/auto-pairs' 
+Plugin 'mileszs/ack.vim'
 
 " Auto-save
 Plugin 'vim-scripts/vim-auto-save'
@@ -38,9 +39,6 @@ Plugin 'tpope/vim-endwise'
 Plugin 'jgdavey/vim-blockle'
 Bundle 'thoughtbot/vim-rspec'
 
-" Jekyll Plugin
-Plugin 'parkr/vim-jekyll'
-
 " Multiple Cursors
 Plugin 'terryma/vim-multiple-cursors'
 
@@ -53,7 +51,6 @@ let g:NERDTreeAutoDeleteBuffer = 1
 call vundle#end()            " required
 
 syntax enable
-" colorscheme monokai
 
 " Make VIM faster
 set synmaxcol=150
