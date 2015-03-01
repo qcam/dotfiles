@@ -1,0 +1,8 @@
+--type-add=css=.sass,.scss
+--type-add=ruby=.rake,.jbuilder,.ru,.lock
+--type-add=html=.haml,.slim,.erb,.html.erb,.html.haml,.html.slim
+--type-add=js=.coffee
+--ignore-dir=public/assets
+--color
+--follow
+--sort-files

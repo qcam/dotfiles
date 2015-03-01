@@ -13,7 +13,7 @@ function move_and_link_dotfile {
   link_dotfile $1
 }
 
-files=(zshrc vimrc zlogin zshenv tmux.conf railsrc irbrc gemrc)
+files=(zshrc vimrc zlogin zshenv tmux.conf railsrc irbrc gemrc ackrc)
 for file in "${files[@]}"
 do
   if [ -f ~/.$file ]; then
