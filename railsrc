@@ -1,0 +1,7 @@
+# .railsrc
+
+-T #Skip Test-Unit
+--skip-turbolinks # Skip Turbolinks
+-d postgresql #Use postgres
+-B # Skip bundle
+
