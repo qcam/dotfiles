@@ -1,4 +1,11 @@
-dotfiles
+Jack A. Huang's dot files
 ========
 
-My vim dotfiles
+### Installation
+
+```sh
+git clone https://github.com/huynhquancam/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+./bootstrap
+```
+
