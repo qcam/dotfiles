@@ -21,6 +21,7 @@ Plugin 'vim-scripts/tComment'
 Plugin 'ervandew/supertab' 
 Plugin 'jiangmiao/auto-pairs' 
 Plugin 'mileszs/ack.vim'
+Plugin 'ngmy/vim-rubocop'
 
 " Auto-save
 Plugin 'vim-scripts/vim-auto-save'
