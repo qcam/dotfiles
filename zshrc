@@ -46,4 +46,7 @@ export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/heroku/bin"
 export PATH="$PATH:/usr/local/lib/node_modules"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
 source $(brew --prefix nvm)/nvm.sh
+
+eval `boot2docker shellinit 2>/dev/null`
