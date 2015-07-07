@@ -30,6 +30,9 @@ let g:auto_save_in_insert_mode = 0
 " Disable auto-save in Python
 autocmd FileType python let g:auto_save=0
 
+" Adding this line makes slim syntax highlighting work
+autocmd BufNewFile,BufRead *.slim set ft=slim
+
 " For polygloting programming
 Plugin 'sheerun/vim-polyglot'
 
