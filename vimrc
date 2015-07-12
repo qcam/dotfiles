@@ -32,6 +32,7 @@ autocmd FileType python let g:auto_save=0
 
 " Adding this line makes slim syntax highlighting work
 autocmd BufNewFile,BufRead *.slim set ft=slim
+autocmd BufNewFile,BufRead *.coffee set ft=coffee
 
 " For polygloting programming
 Plugin 'sheerun/vim-polyglot'
@@ -61,6 +62,7 @@ set synmaxcol=150
 
 " Never wrap the text 
 set nowrap
+set hlsearch
 
 " Make VIM not to stupidly smart
 set formatoptions-=or
@@ -94,13 +96,19 @@ set backspace=indent,eol,start
 set clipboard=unnamed
 
 " Navigation around windows
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-R> <C-W><C-X>
-nnoremap <C-R> <C-W><C-X>
-nnoremap <C-=> <C-W>|
+nmap <C-L> <C-W><C-L>
+nmap <C-H> <C-W><C-H>
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+
+imap <C-L> <C-O>l
+imap <C-H> <C-O>h
+imap <C-J> <C-O>j
+imap <C-K> <C-O>k
+imap <C-W> <C-O>w
+imap <C-E> <C-O>e
+imap <C-\> <C-O>$
+imap <C-B> <C-O>b
 
 " *****************************************
 " "     Leader Mappings

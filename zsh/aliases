@@ -1,0 +1,2 @@
+alias ll="ls -la"
+alias vim='/usr/local/opt/vim/bin/vim'
