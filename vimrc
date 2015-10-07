@@ -15,8 +15,8 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kien/ctrlp.vim' "Ctrl + p to find your file
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-dispatch'
 Plugin 'vim-scripts/tComment'
 Plugin 'ervandew/supertab' 
 Plugin 'jiangmiao/auto-pairs' 
@@ -102,14 +102,9 @@ nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
 
 imap <C-L> <C-O>l
-imap <C-H> <C-O>h
 imap <C-J> <C-O>j
 imap <C-K> <C-O>k
-imap <C-W> <C-O>w
-imap <C-E> <C-O>e
-imap <C-\> <C-O>$
-imap <C-B> <C-O>b
-
+imap <C-h> <C-O>h
 " *****************************************
 " "     Leader Mappings
 " " *****************************************
@@ -125,8 +120,8 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>r :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "Dispatch rspec -I . --color -f p {spec}"
+let g:rspec_runner = "os_x_iterm2"
+let g:rspec_command = "Dispatch rspec {spec}"
 " RSpec.vim mappings
 autocmd FileType qf setlocal wrap linebreak
 

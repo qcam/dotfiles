@@ -1,2 +1,11 @@
 alias ll="ls -la"
 alias vim='/usr/local/opt/vim/bin/vim'
+alias docker-up='docker-machine start default && eval "$(docker-machine env default)"'
+alias ga='git add .'
+alias gb='git branch'
+alias gbd='git branch -D $1'
+alias gcm='git commit'
+alias gst='git status'
+alias gco='git checkout'
+alias bi='bundle install'
+alias bu='bundle update'

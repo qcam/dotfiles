@@ -37,16 +37,14 @@ fpath=(~/zsh-completions/src $fpath)
 
 export TERM=xterm
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # Export paths
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$GEM_HOME/bin:$HOME/.rvm/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/usr/local/heroku/bin"
 export PATH="$PATH:/usr/local/lib/node_modules"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
+
 source $(brew --prefix nvm)/nvm.sh
 source $HOME/dotfiles/zsh/aliases
 
-eval `boot2docker shellinit 2>/dev/null`
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
