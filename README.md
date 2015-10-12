@@ -8,4 +8,3 @@ git clone https://github.com/huynhquancam/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./bootstrap
 ```
-
