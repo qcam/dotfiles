@@ -140,5 +140,3 @@ map <Leader><CR> cit<CR><esc>ko
 
 " String double quote to single
 map <Leader>' cs"'
-
-
