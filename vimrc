@@ -18,8 +18,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
 Plugin 'vim-scripts/tComment'
-Plugin 'ervandew/supertab' 
-Plugin 'jiangmiao/auto-pairs' 
+Plugin 'ervandew/supertab'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'mileszs/ack.vim'
 Plugin 'ngmy/vim-rubocop'
 
@@ -60,7 +60,7 @@ syntax enable
 " Make VIM faster
 set synmaxcol=150
 
-" Never wrap the text 
+" Never wrap the text
 set nowrap
 set hlsearch
 
@@ -111,7 +111,7 @@ imap <C-h> <C-O>h
 let mapleader = " "
 
 " opens NerdTree
-map <Leader>n :NERDTreeToggle<CR> 
+map <Leader>n :NERDTreeToggle<CR>
 
 " *********************************
 " RSPEC VIM MAPPING
