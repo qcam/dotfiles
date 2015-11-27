@@ -22,6 +22,7 @@ Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs' 
 Plugin 'mileszs/ack.vim'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'majutsushi/tagbar'
 
 " Auto-save
 Plugin 'vim-scripts/vim-auto-save'
@@ -55,6 +56,17 @@ let g:NERDTreeAutoDeleteBuffer = 1
 
 call vundle#end()            " required
 
+let g:tagbar_type_ruby = {
+    \ 'kinds' : [
+        \ 'm:modules',
+        \ 'c:classes',
+        \ 'd:describes',
+        \ 'C:contexts',
+        \ 'f:methods',
+        \ 'F:singleton methods'
+    \ ]
+\ }
+nmap <F8> :TagbarToggle<CR>
 syntax enable
 
 " Make VIM faster
