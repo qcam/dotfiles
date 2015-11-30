@@ -34,6 +34,7 @@ autocmd FileType python let g:auto_save=0
 " Adding this line makes slim syntax highlighting work
 autocmd BufNewFile,BufRead *.slim set ft=slim
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
+autocmd BufNewFile,BufRead *.cpp set tabstop=4
 
 " For polygloting programming
 Plugin 'sheerun/vim-polyglot'
@@ -70,7 +71,7 @@ nmap <F8> :TagbarToggle<CR>
 syntax enable
 
 " Make VIM faster
-set synmaxcol=150
+set synmaxcol=80
 
 " Never wrap the text
 set nowrap
@@ -150,5 +151,19 @@ map <Leader>q :wq<CR>
 map <Leader>d yyp
 map <Leader><CR> cit<CR><esc>ko
 
+map <Leader>rq :RuboCop<CR>
+map <Leader>ra :Dispatch ruboCop<CR>
+
 " String double quote to single
 map <Leader>' cs"'
+
+" Clear highlight
+map <Leader>; :noh<CR>
+
+highlight ExtraWhitespace ctermbg=blue guibg=blue
+
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
