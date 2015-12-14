@@ -13,17 +13,17 @@ function move_and_link_dotfile {
   link_dotfile $1
 }
 
-files=(zshrc vimrc zlogin tmux.conf rspec railsrc irbrc gemrc ackrc)
+files=(zshrc vimrc zlogin tmux.conf rspec railsrc irbrc gemrc ackrc gitconfig vim-spell-en.utf-8.add)
 for file in "${files[@]}"
 do
   if [ -f ~/.$file ]; then
     while true; do
       read -p "Do you wish to overwrite ~/.$file?: (yn) " yn
       case $yn in
-        [Yy]* ) 
+        [Yy]* )
           move_and_link_dotfile $file
           break;;
-        [Nn]* ) 
+        [Nn]* )
           echo "$file skipped."
           break;;
         * ) echo "Yes or No only.";;
@@ -33,3 +33,7 @@ do
     link_dotfile $file
   fi
 done
+
+if ! [ -e ~/.config/powerline ]; then
+  ln -s $current/config/powerline ~/.config/powerline
+fi

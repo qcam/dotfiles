@@ -1,0 +1,12 @@
+{
+	"ext": {
+		"tmux": {
+			"colorscheme": "solarized",
+			"theme": "default"
+		},
+		"vim": {
+			"colorscheme": "solarized",
+			"theme": "default"
+		}
+	}
+}

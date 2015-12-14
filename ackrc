@@ -3,6 +3,7 @@
 --type-add=html=.haml,.slim,.erb,.html.erb,.html.haml,.html.slim
 --type-add=js=.coffee
 --ignore-dir=public/assets
+--ignore-dir=tmp/
 --color
 --follow
 --sort-files

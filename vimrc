@@ -13,16 +13,21 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'kien/ctrlp.vim' "Ctrl + p to find your file
+Plugin 'ctrlpvim/ctrlp.vim' "Ctrl + p to find your file
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
 Plugin 'vim-scripts/tComment'
 Plugin 'ervandew/supertab'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'mileszs/ack.vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'majutsushi/tagbar'
+Plugin 'rking/ag.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 " Auto-save
 Plugin 'vim-scripts/vim-auto-save'
@@ -45,6 +50,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
 Plugin 'jgdavey/vim-blockle'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Multiple Cursors
 Plugin 'terryma/vim-multiple-cursors'
@@ -68,14 +74,22 @@ let g:tagbar_type_ruby = {
     \ ]
 \ }
 nmap <F8> :TagbarToggle<CR>
-syntax enable
 
-" Make VIM faster
-set synmaxcol=80
+syntax enable
+set background=dark
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  'node_module\|tmp',
+  \ 'file': '\v\.(zip|exe|so|dll)$',
+  \ }
 
 " Never wrap the text
 set nowrap
 set hlsearch
+
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 
 " Make VIM not to stupidly smart
 set formatoptions-=or
@@ -160,10 +174,27 @@ map <Leader>' cs"'
 " Clear highlight
 map <Leader>; :noh<CR>
 
+" Match trailing space in file
 highlight ExtraWhitespace ctermbg=blue guibg=blue
-
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" ============== Spell-checking setup
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+" Spell-check Markdown files
+autocmd FileType markdown setlocal spell
+
+" Spell-check Git messages
+autocmd FileType gitcommit setlocal spell
+
+" Set spellfile to location that is guaranteed to exist,
+" can be symlinked to Dropbox or kept in Git
+" and managed outside of thoughtbot/dotfiles using rcm.
+set spellfile=$HOME/.vim-spell-en.utf-8.add
+
+" Autocomplete with dictionary words when spell check is on
+set complete+=kspell

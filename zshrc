@@ -35,7 +35,7 @@ export EDITOR='vim'
 # Zsh-completions path
 fpath=(~/zsh-completions/src $fpath)
 
-export TERM=xterm
+export TERM=xterm-256color
 
 # Export paths
 export PATH="$GEM_HOME/bin:$HOME/.rvm/bin:$PATH"

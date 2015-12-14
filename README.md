@@ -6,5 +6,10 @@ Jack A. Huang's dot files
 ```sh
 git clone https://github.com/huynhquancam/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-./bootstrap
+./bin/bootstrap.sh
 ```
+
+### Prerequisites
+
+* Install `ctags`
+* Install `pip` and `powerline`
