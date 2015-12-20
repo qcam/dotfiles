@@ -1,3 +1,4 @@
 # Display spec running time
 --profile
 --format progress
+--fail-fast

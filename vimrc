@@ -86,10 +86,7 @@ let g:ctrlp_custom_ignore = {
 " Never wrap the text
 set nowrap
 set hlsearch
-
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
+set incsearch
 
 " Make VIM not to stupidly smart
 set formatoptions-=or

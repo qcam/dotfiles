@@ -38,7 +38,6 @@ fpath=(~/zsh-completions/src $fpath)
 export TERM=xterm-256color
 
 # Export paths
-export PATH="$GEM_HOME/bin:$HOME/.rvm/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/lib/node_modules"
@@ -47,4 +46,4 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
 source $(brew --prefix nvm)/nvm.sh
 source $HOME/dotfiles/zsh/aliases
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
