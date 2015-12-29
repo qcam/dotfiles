@@ -20,6 +20,7 @@
   co = checkout
   b = branch
   lg = log --graph --oneline --decorate
+  finish=!sh -c 'git checkout develop && git b -D $1' -
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
