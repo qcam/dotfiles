@@ -40,6 +40,7 @@ autocmd FileType python let g:auto_save=0
 autocmd BufNewFile,BufRead *.slim set ft=slim
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
 autocmd BufNewFile,BufRead *.cpp set tabstop=4
+autocmd BufNewFile,BufRead *.es6 set ft=javascript
 
 " For polygloting programming
 Plugin 'sheerun/vim-polyglot'

@@ -46,5 +46,6 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
 
 source $(brew --prefix nvm)/nvm.sh
 source $HOME/dotfiles/zsh/aliases
+source /usr/local/share/zsh/site-functions/_aws
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

@@ -2,10 +2,10 @@
 
 [user]
 # Please adapt and uncomment the following lines:
-  name = Cam Huynh
-  email = huynhquancam@gmail.com
+	name = Jack Huang
+	email = 
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/huynhquancam/.gitignore_global
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
