@@ -11,59 +11,54 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'ctrlpvim/ctrlp.vim' "Ctrl + p to find your file
+
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
-Plugin 'vim-scripts/tComment'
-Plugin 'ervandew/supertab'
-Plugin 'ngmy/vim-rubocop'
-Plugin 'majutsushi/tagbar'
-Plugin 'rking/ag.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
 
-" Auto-save
-Plugin 'vim-scripts/vim-auto-save'
-let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
-" Disable auto-save in Python
-autocmd FileType python let g:auto_save=0
+" Code Comment
+Plugin 'vim-scripts/tComment'
+
+" Autocomplete
+Plugin 'ervandew/supertab'
+
+" Powerline
+Plugin 'vim-ariline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Git
+Plugin 'airblade/vim-gitgutter'
+
+" Polyglot VIM
+Plugin 'sheerun/vim-polyglot'
 
 " Adding this line makes slim syntax highlighting work
 autocmd BufNewFile,BufRead *.slim set ft=slim
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
 autocmd BufNewFile,BufRead *.cpp set tabstop=4
 autocmd BufNewFile,BufRead *.es6 set ft=javascript
+autocmd BufNewFile,BufRead *.rb,*.rake,Gemfile,Gemfile.lock set ft=ruby
 
-" For polygloting programming
-Plugin 'sheerun/vim-polyglot'
-
+" ===================== BEGIN Ruby ======================
 " Ruby Plugins
-Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-endwise'
-Plugin 'jgdavey/vim-blockle'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-" Multiple Cursors
-Plugin 'terryma/vim-multiple-cursors'
+" Snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
-" File Browser Plugin
-Plugin 'scrooloose/nerdtree'
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeAutoDeleteBuffer = 1
+" Ruby Block selector with vir, var
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
-call vundle#end()            " required
+" Ruby Lint
+Plugin 'ngmy/vim-rubocop'
 
+" Toggle Tagbar with F8
+Plugin 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
 let g:tagbar_type_ruby = {
     \ 'kinds' : [
         \ 'm:modules',
@@ -74,7 +69,38 @@ let g:tagbar_type_ruby = {
         \ 'F:singleton methods'
     \ ]
 \ }
-nmap <F8> :TagbarToggle<CR>
+
+" Toggle block style with Ctrl+B
+Plugin 'jgdavey/vim-blockle'
+
+" RSpec
+Plugin 'thoughtbot/vim-rspec'
+" ===================== END Ruby ======================
+
+" Syntastic
+Plugin 'scrooloose/syntastic'
+let g:syntastic_javascript_checkers = ['eslint']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Multiple Cursors
+Plugin 'terryma/vim-multiple-cursors'
+
+" File Browsing
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim' "Ctrl + p to find your file
+Plugin 'rking/ag.vim'
+
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeAutoDeleteBuffer = 1
+
+call vundle#end()            " required
 
 syntax enable
 set background=dark

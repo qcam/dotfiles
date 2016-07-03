@@ -2,8 +2,9 @@
 
 [user]
 # Please adapt and uncomment the following lines:
-	name = Jack Huang
-	email = 
+	name = Cam Huynh
+	email = huynhquancam@gmail.com
+	signingkey = BC775C77
 [core]
 	excludesfile = /Users/huynhquancam/.gitignore_global
 [filter "lfs"]
@@ -27,3 +28,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	gpgsign = true
