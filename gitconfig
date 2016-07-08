@@ -6,7 +6,7 @@
 	email = huynhquancam@gmail.com
 	signingkey = BC775C77
 [core]
-	excludesfile = /Users/huynhquancam/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
@@ -22,6 +22,7 @@
   b = branch
   lg = log --graph --oneline --decorate
   finish=!sh -c 'git checkout develop && git b -D $1' -
+  squash = rebase -i
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -30,3 +31,4 @@
 	trustExitCode = true
 [commit]
 	gpgsign = true
+	message = ~/.gitmessage

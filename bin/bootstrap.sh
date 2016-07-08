@@ -1,6 +1,6 @@
 #!/bin/sh
 
-current=$(pwd)
+current=$pwd
 
 function link_dotfile {
   ln -s $current/$1 ~/.$1
@@ -13,7 +13,7 @@ function move_and_link_dotfile {
   link_dotfile $1
 }
 
-files=(zshrc vimrc zlogin tmux.conf rspec railsrc irbrc gemrc ackrc ctags gitconfig vim-spell-en.utf-8.add)
+files=(zshrc vimrc zlogin tmux.conf rspec railsrc irbrc gemrc ackrc ctags gitconfig gitmessage vim-spell-en.utf-8.add)
 for file in "${files[@]}"
 do
   if [ -f ~/.$file ]; then
@@ -34,6 +34,4 @@ do
   fi
 done
 
-if ! [ -e ~/.config/powerline ]; then
-  ln -s $current/config/powerline ~/.config/powerline
-fi
+ln -s $current/config/nvim ~/.config/nvim

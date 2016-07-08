@@ -25,6 +25,7 @@ Plugin 'ervandew/supertab'
 " Powerline
 Plugin 'vim-ariline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'chriskempson/base16-vim'
 
 " Git
 Plugin 'airblade/vim-gitgutter'
@@ -36,8 +37,9 @@ Plugin 'sheerun/vim-polyglot'
 autocmd BufNewFile,BufRead *.slim set ft=slim
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
 autocmd BufNewFile,BufRead *.cpp set tabstop=4
-autocmd BufNewFile,BufRead *.es6 set ft=javascript
+autocmd BufNewFile,BufRead *.es6 set ft=javascript.jsx
 autocmd BufNewFile,BufRead *.rb,*.rake,Gemfile,Gemfile.lock set ft=ruby
+autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 
 " ===================== BEGIN Ruby ======================
 " Ruby Plugins
@@ -74,7 +76,8 @@ let g:tagbar_type_ruby = {
 Plugin 'jgdavey/vim-blockle'
 
 " RSpec
-Plugin 'thoughtbot/vim-rspec'
+" Plugin 'thoughtbot/vim-rspec'
+Plugin 'janko-m/vim-test'
 " ===================== END Ruby ======================
 
 " Syntastic
@@ -102,8 +105,14 @@ let g:NERDTreeAutoDeleteBuffer = 1
 
 call vundle#end()            " required
 
-syntax enable
+" Light Background
+set number
 set background=dark
+colorscheme base16-monokai
+set termguicolors
+let base16colorspace=256
+
+syntax enable
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_module\|tmp',
@@ -130,9 +139,6 @@ set expandtab
 " Auto indentation
 set autoindent
 
-" Light Background
-set bg=light
-set number
 
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
@@ -166,16 +172,16 @@ let mapleader = " "
 map <Leader>n :NERDTreeToggle<CR>
 
 " *********************************
-" RSPEC VIM MAPPING
+" TEST MAPPING
 " *********************************
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>r :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm2"
-let g:rspec_command = "Dispatch bundle exec rspec {spec}"
-" RSpec.vim mappings
-autocmd FileType qf setlocal wrap linebreak
+nmap <silent> <leader>r :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+let test#strategy = "dispatch"
+
+" autocmd FileType qf setlocal wrap linebreak
 
 " convert ruby hash from :abc => '123' to abc: '123'
 map <Leader>h :s/:\([^=,'"]*\) =>/\1:/g"']<CR>
