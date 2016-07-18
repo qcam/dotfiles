@@ -102,9 +102,9 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 
 " Theme settings
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme base16-monokai
+colorscheme base16-ocean
+set termguicolors
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_module\|tmp',
@@ -114,6 +114,7 @@ let g:ctrlp_custom_ignore = {
 " Never wrap the text
 set nowrap
 set number
+set lazyredraw
 
 " Make VIM not to stupidly smart
 set formatoptions-=or
@@ -153,14 +154,6 @@ let test#strategy = "dispatch"
 " convert ruby hash from :abc => '123' to abc: '123'
 map <Leader>h :s/:\([^=,'"]*\) =>/\1:/g"']<CR>
 map <Leader>H :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
-
-" Quit all windows shortcut
-map <Leader>x :qa<CR>
-
-map <Leader>d yyp
-
-map <Leader>rq :RuboCop<CR>
-map <Leader>ra :Dispatch ruboCop<CR>
 
 " Match trailing space in file
 highlight ExtraWhitespace ctermbg=blue guibg=blue

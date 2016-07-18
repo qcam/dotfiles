@@ -7,6 +7,6 @@ IRB.conf[:AUTO_INDENT] = true
 
 class Object
   def find_me
-    self.find_by_email 'jack@example.com'
+    self.find_by_email 'cam@example.com'
   end
 end

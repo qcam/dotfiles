@@ -1,5 +1,7 @@
-Jack A. Huang's dot files
+Cam Huynh's dotfiles
 ========
+
+My terminal configurations
 
 ### Installation
 
@@ -11,5 +13,9 @@ cd ~/dotfiles
 
 ### Prerequisites
 
-* Install `ctags`
-* Install `pip` and `powerline`
+* `vim-plug` for vim plugin managers
+* Support NeoVIM + VIM
+* Tmux 2.2+ (with terminal-override support)
+* NeoVim 0.1.15+ (with termguicolors support)
+* VIM 7.4+ (with termguicolors support)
+
