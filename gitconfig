@@ -6,7 +6,7 @@
 	email = huynhquancam@gmail.com
 	signingkey = BC775C77
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/hqc/.gitignore_global
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
