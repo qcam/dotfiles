@@ -151,24 +151,6 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "dispatch"
 
-" convert ruby hash from :abc => '123' to abc: '123'
-map <Leader>h :s/:\([^=,'"]*\) =>/\1:/g"']<CR>
-map <Leader>H :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
-
-" Match trailing space in file
-highlight ExtraWhitespace ctermbg=blue guibg=blue
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-" Spell-check Markdown files
-autocmd FileType markdown setlocal spell
-
-" Spell-check Git messages
-autocmd FileType gitcommit setlocal spell
-
 " Set spellfile to location that is guaranteed to exist,
 " can be symlinked to Dropbox or kept in Git
 " and managed outside of thoughtbot/dotfiles using rcm.

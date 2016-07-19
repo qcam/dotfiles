@@ -1,66 +1,20 @@
-" ================================================================
-" BEGIN PLUG-INS
-" ==================================================
-call plug#begin('~/.vim/plugged')
+" Load all vim-plug plugins
+source ~/dotfiles/plugs.vim
 
-" Theme
-Plug 'chriskempson/base16-vim'
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
 
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-dispatch'
-
-" Code Comment
-Plug 'vim-scripts/tComment'
-
-" Autocomplete
-Plug 'ervandew/supertab'
-
-" Airline bar
-Plug 'git@github.com:vim-airline/vim-airline.git' | Plug 'git@github.com:vim-airline/vim-airline-themes.git'
-
-" Git
-Plug 'airblade/vim-gitgutter'
-
-" Polyglot VIM
-Plug 'sheerun/vim-polyglot'
-
-" ===================== BEGIN Ruby ======================
-" Ruby Plugs
-Plug 'vim-ruby/vim-ruby'
-" Snippets
-Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim' | Plug 'garbas/vim-snipmate' | Plug 'honza/vim-snippets'
-" Ruby Block selector with vir, var
-Plug 'kana/vim-textobj-user' | Plug 'nelstrom/vim-textobj-rubyblock'
-" Ruby Lint
-Plug 'ngmy/vim-rubocop'
-" Toggle Tagbar with F8
-Plug 'majutsushi/tagbar'
-" Toggle block style with Ctrl+B
-Plug 'jgdavey/vim-blockle'
-" RSpec
-" Plug 'thoughtbot/vim-rspec'
-Plug 'janko-m/vim-test'
-" ===================== END Ruby ======================
-
-" Syntastic
-Plug 'scrooloose/syntastic'
-
-" Multiple Cursors
-Plug 'terryma/vim-multiple-cursors'
-
-" File Browsing
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rking/ag.vim'
-
-call plug#end()
-" ============================================
-" ENG PLUG-INS
-" =========================================================
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " For ruby block selecting
 runtime macros/matchit.vim
+
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+  let g:ctrlp_use_caching = 0
+endif
 
 " Syntastic Check
 let g:syntastic_javascript_checkers = ['eslint']
@@ -68,6 +22,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Configure vim-airline
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -84,14 +40,6 @@ let g:tagbar_type_ruby = {
         \ 'F:singleton methods'
     \ ]
 \ }
-
-" Set filetypes
-autocmd BufNewFile,BufRead *.slim set ft=slim
-autocmd BufNewFile,BufRead *.coffee set ft=coffee
-autocmd BufNewFile,BufRead *.cpp set tabstop=4
-autocmd BufNewFile,BufRead *.es6,*.js set ft=javascript.jsx
-autocmd BufNewFile,BufRead *.rb,*.rake,Gemfile set ft=ruby
-autocmd BufRead,BufNewFile *.md set ft=markdown
 
 " Powerline settings
 let g:airline_powerline_fonts = 1
@@ -129,6 +77,9 @@ set noswapfile
 set clipboard=unnamed
 set spellfile=$HOME/.vim-spell-en.utf-8.add
 set complete+=kspell
+set t_ut= " Disable black blackground in vim
+set vb t_vb= " Disable bell
+set ruler
 
 " *********************************
 "     Leader Mappings
@@ -147,24 +98,3 @@ nmap <silent> <Leader>a :TestSuite<CR>
 nmap <silent> <Leader>l :TestLast<CR>
 nmap <silent> <Leader>g :TestVisit<CR>
 let test#strategy = "dispatch"
-
-" convert ruby hash from :abc => '123' to abc: '123'
-nmap <Leader>h :s/:\([^=,'"]*\) =>/\1:/g"']<CR>
-nmap <Leader>H :%s/:\([^=,'"]*\) =>/\1:/g"']<CR>
-
-" Match trailing space in file
-highlight ExtraWhitespace ctermbg=blue guibg=blue
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-" Spell-check Markdown files
-autocmd FileType markdown setlocal spell
-
-" Spell-check Git messages
-autocmd FileType gitcommit setlocal spell
-
-set t_ut=
-

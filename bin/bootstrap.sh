@@ -1,9 +1,9 @@
 #!/bin/sh
 
-current=$pwd
+current=`pwd`
 
 function link_dotfile {
-  ln -s $current/$1 ~/.$1
+  ln -fs $current/$1 ~/.$1
   echo ".$1 linked to ~/.$1."
 }
 
@@ -34,4 +34,5 @@ do
   fi
 done
 
-ln -s $current/config/nvim ~/.config/nvim
+ln -sf $current/config/nvim ~/.config/nvim
+ln -sf $current/vim ~/.vim

@@ -2,33 +2,33 @@
 
 [user]
 # Please adapt and uncomment the following lines:
-	name = Cam Huynh
-	email = huynhquancam@gmail.com
-	signingkey = BC775C77
+	name          = Cam Huynh
+	email         = huynhquancam@gmail.com
+	signingkey    = BC775C77
 [core]
-	excludesfile = /Users/hqc/.gitignore_global
+	excludesfile  = /Users/hqc/.gitignore_global
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+	clean         = git-lfs clean %f
+	smudge        = git-lfs smudge %f
+	required      = true
 [merge]
-  tool = vimdiff
+  tool          = vimdiff
 [color]
-  ui = auto
+  ui            = auto
 [alias]
-  st = status -sb
-  cm = commit
-  co = checkout
-  b = branch
-  lg = log --graph --oneline --decorate
-  finish=!sh -c 'git checkout develop && git b -D $1' -
-  squash = rebase -i
+  st            = status -sb
+  cm            = commit
+  co            = checkout
+  b             = branch
+  lg            = log --graph --oneline --decorate
+  finish        = !sh -c 'git checkout develop && git b -D $1' -
+  squash        = rebase -i
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	gpgsign = true
-	message = ~/.gitmessage
+	gpgsign       = true
+	message       = ~/.gitmessage
