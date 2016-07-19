@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+
+abort("Wrong argument. Try checklist today or checklist yesterday") unless ARGV[0]
+
+require 'date'
+
+def next_business_day(date)
+  skip_weekends(date, 1)
+end
+
+def previous_business_day(date)
+  skip_weekends(date, -1)
+end
+
+def skip_weekends(date, inc)
+  date += inc
+  while (date.wday % 7 == 0) or (date.wday % 7 == 6) do
+    date += inc
+  end
+  date
+end
+
+todos_path = ENV['TODOS_PATH']
+
+date = case ARGV[0].to_sym
+       when :today, :td
+         Date.today.to_s
+       when :yesterday, :ytd, :friday, :last_friday
+         previous_business_day(Date.today).to_s
+       else
+         abort "Only today and yesterday is supported"
+       end
+
+mode = (ARGV[1] || 'edit').to_sym
+
+system("mkdir -p #{todos_path}")
+system("touch #{todos_path}/checklist-#{date}.md")
+
+if mode == :edit
+  system("vim #{todos_path}/checklist-#{date}.md +':cd #{todos_path}'")
+elsif mode == :preview
+  system("more #{todos_path}/checklist-#{date}.md")
+else
+  abort 'Only preview and edit mode are supported'
+end
+
