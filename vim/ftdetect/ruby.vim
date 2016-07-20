@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.rb,*.rake,*.ree,Gemfile set ft=ruby
+autocmd BufNewFile,BufRead *.rb,*.rake,Gemfile set ft=ruby

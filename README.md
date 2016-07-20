@@ -8,7 +8,7 @@ My terminal configurations
 ```sh
 git clone https://github.com/huynhquancam/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-./bin/bootstrap.sh
+./bootstrap
 ```
 
 ### Prerequisites
