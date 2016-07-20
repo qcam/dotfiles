@@ -5,8 +5,8 @@ export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/lib/node_modules"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
 export PATH="$PATH:$HOME/dotfiles/bin/"
-export NOTES_PATH="$HOME/notes"
-export TODOS_PATH="$NOTES_PATH/todos"
+export NOTES_PATH="$HOME/Dropbox/Notes"
+export TODOS_PATH="$NOTES_PATH/Todos"
 
 source $(brew --prefix nvm)/nvm.sh
 # Include Python VirtualEnv & VirtualEnvWrapper

@@ -151,11 +151,11 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "dispatch"
 
-" Set spellfile to location that is guaranteed to exist,
-" can be symlinked to Dropbox or kept in Git
-" and managed outside of thoughtbot/dotfiles using rcm.
-set spellfile=$HOME/.vim-spell-en.utf-8.add
-
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
 " =============
+
+nmap <Leader><Leader> <C-^>
+nmap <Leader>rr :edit!<CR>
+nmap <Leader>w :u<CR>
+nmap <Leader>x :wqa!<CR>

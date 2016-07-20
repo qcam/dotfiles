@@ -31,10 +31,9 @@ alias fb='open https://facebook.com/huynhquancam'
 alias tt='open https://twitter.com/huynhquancam'
 alias web='open https://hqc.io'
 alias resume='open https://hqc.io/rbcv'
-alias more='pygmentize -g'
 alias ?='more -l bash ~/dotfiles/zsh/aliases.zsh'
-alias today='checklist today'
-alias ytd='checklist yesterday'
+alias today="vim $(checklist today) +':cd $TODOS_PATH'"
+alias ytd="vim $(checklist yesterday) +':cd $TODOS_PATH'"
 
 # Ruby - Bundle
 alias bi='bundle install -j8 --path .bundle'

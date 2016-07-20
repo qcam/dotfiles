@@ -75,7 +75,6 @@ set expandtab
 set nobackup
 set noswapfile
 set clipboard=unnamed
-set spellfile=$HOME/.vim-spell-en.utf-8.add
 set complete+=kspell
 set t_ut= " Disable black blackground in vim
 set vb t_vb= " Disable bell
@@ -98,3 +97,8 @@ nmap <silent> <Leader>a :TestSuite<CR>
 nmap <silent> <Leader>l :TestLast<CR>
 nmap <silent> <Leader>g :TestVisit<CR>
 let test#strategy = "dispatch"
+
+nmap <Leader><Leader> <C-^>
+nmap <Leader>rr :edit!<CR>
+nmap <Leader>w :u<CR>
+nmap <Leader>x :wqa!<CR>

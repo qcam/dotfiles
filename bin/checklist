@@ -31,16 +31,8 @@ date = case ARGV[0].to_sym
          abort "Only today and yesterday is supported"
        end
 
-mode = (ARGV[1] || 'edit').to_sym
-
 system("mkdir -p #{todos_path}")
 system("touch #{todos_path}/checklist-#{date}.md")
 
-if mode == :edit
-  system("vim #{todos_path}/checklist-#{date}.md +':cd #{todos_path}'")
-elsif mode == :preview
-  system("more #{todos_path}/checklist-#{date}.md")
-else
-  abort 'Only preview and edit mode are supported'
-end
+puts "#{todos_path}/checklist-#{date}.md"
 
