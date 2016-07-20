@@ -28,6 +28,9 @@ Plug 'sheerun/vim-polyglot'
 " Easy Align
 Plug 'junegunn/vim-easy-align'
 
+" Worque
+Plug 'huynhquancam/vim-worque'
+
 " ===================== BEGIN Ruby ======================
 " Ruby Plugs
 Plug 'vim-ruby/vim-ruby'
