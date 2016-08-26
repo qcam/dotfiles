@@ -12,8 +12,13 @@ runtime macros/matchit.vim
 
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden --ignore-dir=.git -g "" %s'
   let g:ctrlp_use_caching = 0
+  " CtrlP Settings
+  let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(zip|exe|so|dll)$',
+    \ }
 endif
 
 " Syntastic Check
@@ -22,6 +27,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
 
 " Configure vim-airline
 set statusline+=%#warningmsg#
@@ -49,11 +56,6 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 
-" CtrlP Settings
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  'node_module\|tmp\',
-  \ 'file': '\v\.(zip|exe|so|dll)$',
-  \ }
 " Theme settings
 syntax on
 set lazyredraw
