@@ -9,3 +9,7 @@ source $HOME/dotfiles/zsh/aliases.zsh
 source /usr/local/share/zsh/site-functions/_aws
 source $HOME/dotfiles/zsh/rbenv.zsh
 
+# Source for ~/.zshrc.local if it exists
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -f ~/.alias.local ]] && source ~/.alias.local
+
