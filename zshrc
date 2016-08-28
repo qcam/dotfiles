@@ -11,5 +11,5 @@ source $HOME/dotfiles/zsh/rbenv.zsh
 
 # Source for ~/.zshrc.local if it exists
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-[[ -f ~/.alias.local ]] && source ~/.alias.local
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
 

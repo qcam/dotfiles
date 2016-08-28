@@ -13,7 +13,7 @@ function move_and_link_dotfile {
   link_dotfile $1
 }
 
-files=(zshrc vimrc zlogin tmux.conf rspec railsrc irbrc gemrc ackrc ctags gitconfig gitmessage vim-spell-en.utf-8.add)
+files=(zshrc vimrc zlogin tmux.conf rspec railsrc irbrc gemrc ackrc ctags gitconfig gitmessage)
 for file in "${files[@]}"
 do
   if [ -f ~/.$file ]; then
@@ -34,5 +34,5 @@ do
   fi
 done
 
-ln -sf $current/config/nvim ~/.config/nvim
-ln -sf $current/vim ~/.vim
+ln -sf $current/config/nvim ~/.config
+ln -sf $current/vim ~
