@@ -1,6 +1,5 @@
-Your commit title
+[#] Commit title
 
-List of changes:
-* ...
-* ...
-
+# Be specific about what your commit does
+* Item A
+* Item B
