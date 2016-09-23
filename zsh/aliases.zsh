@@ -47,6 +47,7 @@ alias rb='rbenv'
 alias rbs='rbenv shell'
 alias rbl='rbenv local'
 alias rbrh='rbenv rehash'
+alias r19='rbs 1.9.3-p551'
 
 # Node - NPM
 alias ni='npm install'
