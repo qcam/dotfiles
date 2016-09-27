@@ -30,6 +30,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
 
+let g:yankring_clipboard_monitor=0
+
 " Configure vim-airline
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
