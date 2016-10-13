@@ -28,12 +28,7 @@ Plug 'sheerun/vim-polyglot'
 " Easy Align
 Plug 'junegunn/vim-easy-align'
 
-" Worque
-Plug 'huynhquancam/vim-worque'
-
 " ===================== BEGIN Ruby ======================
-" Ruby Plugs
-Plug 'vim-ruby/vim-ruby'
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim' | Plug 'garbas/vim-snipmate' | Plug 'honza/vim-snippets'
 " Ruby Block selector with vir, var
@@ -55,8 +50,7 @@ Plug 'scrooloose/syntastic'
 " Multiple Cursors
 Plug 'terryma/vim-multiple-cursors'
 
-" File Browsing
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 

@@ -30,12 +30,15 @@ let g:syntastic_check_on_wq = 0
 
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
 
-let g:yankring_clipboard_monitor=0
-
 " Configure vim-airline
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" NERDTree Settings
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeAutoDeleteBuffer = 1
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -52,11 +55,6 @@ let g:tagbar_type_ruby = {
 
 " Powerline settings
 let g:airline_powerline_fonts = 1
-
-" NEADTree Settings
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeAutoDeleteBuffer = 1
 
 " Theme settings
 syntax on

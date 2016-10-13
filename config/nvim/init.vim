@@ -27,7 +27,7 @@ Plug 'sheerun/vim-polyglot'
 
 " ===================== BEGIN Ruby ======================
 " Ruby Plugs
-Plug 'vim-ruby/vim-ruby'
+" Plug 'vim-ruby/vim-ruby'
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim' | Plug 'garbas/vim-snipmate' | Plug 'honza/vim-snippets'
 " Ruby Block selector with vir, var
