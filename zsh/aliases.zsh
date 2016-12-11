@@ -31,7 +31,7 @@ alias fb='open https://facebook.com/huynhquancam'
 alias tt='open https://twitter.com/huynhquancam'
 alias web='open https://hqc.io'
 alias resume='open https://hqc.io/rbcv'
-alias ?='more -l bash ~/dotfiles/zsh/aliases.zsh'
+alias ?='less ~/dotfiles/zsh/aliases.zsh'
 alias today="vim `worque --today` +':cd $WORQUE_PATH'"
 alias ytd="vim `worque --yesterday` +':cd $WORQUE_PATH'"
 
@@ -48,6 +48,7 @@ alias rbs='rbenv shell'
 alias rbl='rbenv local'
 alias rbrh='rbenv rehash'
 alias r19='rbs 1.9.3-p551'
+alias r222='rbs 2.2.2'
 
 # Node - NPM
 alias ni='npm install'
@@ -67,3 +68,5 @@ alias vimrc='vim ~/dotfiles/vimrc'
 alias nvimrc='vim ~/dotfiles/config/nvim/init.vim'
 alias zshrc='vim ~/dotfiles/zshrc'
 
+alias shrug='echo "¯\_(ツ)_/¯" | pbcopy'
+alias copy-key='cat ~/.ssh/id_rsa.pub | pbcopy'
