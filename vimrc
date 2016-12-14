@@ -106,3 +106,6 @@ nmap <Leader><Leader> <C-^>
 nmap <Leader>rr :edit!<CR>
 nmap <Leader>w :u<CR>
 nmap <Leader>x :wqa!<CR>
+
+nmap <Leader>x :wqa!<CR>
+noremap <Leader>s :w<CR>
