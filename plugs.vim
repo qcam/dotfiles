@@ -17,7 +17,7 @@ Plug 'vim-scripts/tComment'
 Plug 'ervandew/supertab'
 
 " Airline bar
-Plug 'git@github.com:vim-airline/vim-airline.git' | Plug 'git@github.com:vim-airline/vim-airline-themes.git'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
 " Git
 Plug 'airblade/vim-gitgutter'

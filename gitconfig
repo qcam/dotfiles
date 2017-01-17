@@ -31,3 +31,5 @@
 [commit]
 	gpgsign       = true
 	template       = ~/.gitmessage
+[credential]
+	helper = osxkeychain
