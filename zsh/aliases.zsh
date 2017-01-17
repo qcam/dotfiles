@@ -32,8 +32,6 @@ alias tt='open https://twitter.com/huynhquancam'
 alias web='open https://hqc.io'
 alias resume='open https://hqc.io/rbcv'
 alias ?='less ~/dotfiles/zsh/aliases.zsh'
-alias today="vim `worque --today` +':cd $WORQUE_PATH'"
-alias ytd="vim `worque --yesterday` +':cd $WORQUE_PATH'"
 
 # Ruby - Bundle
 alias bi='bundle install -j8 --path .bundle'
