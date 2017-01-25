@@ -35,4 +35,4 @@ do
 done
 
 ln -sf $current/config/nvim ~/.config
-ln -sf $current/vim ~
+ln -sf $current/vim ~/.vim
