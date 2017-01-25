@@ -34,5 +34,5 @@ do
   fi
 done
 
-ln -sf $current/config/nvim ~/.config
+ln -sf $current/nvim ~/.config/nvim
 ln -sf $current/vim ~/.vim
