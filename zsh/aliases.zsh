@@ -14,6 +14,7 @@ alias gpl='git pull'
 alias gfn='git finish'
 alias gl='git lg'
 alias pr='hub pull-request'
+alias rename="gb -m"
 
 # Docker
 alias drmi='docker rmi $(docker ps -aq --filter dangling=true)'
