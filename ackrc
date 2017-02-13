@@ -4,6 +4,7 @@
 --type-add=js=.coffee
 --ignore-dir=public/assets
 --ignore-dir=tmp/
+--ignore-dir=.bundle/
 --color
 --follow
 --sort-files
