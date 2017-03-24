@@ -15,6 +15,10 @@ alias gfn='git finish'
 alias gl='git lg'
 alias pr='hub pull-request'
 alias rename="gb -m"
+alias wip="gcm -m WIP"
+alias fixup="gcm -m fixup"
+alias fixed="gcm -m fixed"
+alias yolo='ga && gcm -m "$(curl -s whatthecommit.com/index.txt)"'
 
 # Docker
 alias drmi='docker rmi $(docker ps -aq --filter dangling=true)'
