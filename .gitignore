@@ -6,4 +6,5 @@ vim/plugged
 
 tmuxinator
 .ctags
+./tags
 .netrwhist
