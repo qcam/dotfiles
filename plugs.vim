@@ -21,6 +21,7 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
 " Git
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " Polyglot VIM
 Plug 'sheerun/vim-polyglot'
@@ -35,8 +36,6 @@ Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim' | Plug 'garbas/vim-
 Plug 'kana/vim-textobj-user' | Plug 'nelstrom/vim-textobj-rubyblock'
 " Ruby Lint
 Plug 'ngmy/vim-rubocop'
-" Toggle Tagbar with F8
-Plug 'majutsushi/tagbar'
 " Toggle block style with Ctrl+B
 Plug 'jgdavey/vim-blockle'
 " RSpec

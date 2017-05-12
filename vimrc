@@ -10,11 +10,16 @@ nmap ga <Plug>(EasyAlign)
 " For ruby block selecting
 runtime macros/matchit.vim
 
+
 if executable('ag')
+  " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden --ignore-dir=.git -g "" %s'
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
-  " CtrlP Settings
   let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
     \ 'file': '\v\.(zip|exe|so|dll)$',
