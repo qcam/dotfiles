@@ -7,6 +7,7 @@ export PATH="$PATH:$HOME/dotfiles/bin"
 export NOTES_PATH="$HOME/Dropbox/Notes"
 export WORQUE_PATH="$NOTES_PATH/Todos"
 export GOPATH="$HOME:/go"
+export GPG_TTY=$(tty) # for GPG key signing
 
 source $(brew --prefix nvm)/nvm.sh
 # Include Python VirtualEnv & VirtualEnvWrapper
