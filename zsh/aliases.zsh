@@ -47,7 +47,6 @@ alias fb='open https://facebook.com/huynhquancam'
 alias tt='open https://twitter.com/huynhquancam'
 alias web='open https://hqc.io'
 alias resume='open https://hqc.io/rbcv'
-alias ?='less ~/dotfiles/zsh/aliases.zsh'
 
 # Ruby - Bundle
 alias bi='bundle install -j8 --path .bundle'
