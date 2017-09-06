@@ -49,7 +49,7 @@ Plug 'scrooloose/syntastic'
 " Multiple Cursors
 Plug 'terryma/vim-multiple-cursors'
 
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 
@@ -57,4 +57,3 @@ call plug#end()
 " ============================================
 " ENG PLUG-INS
 " =========================================================
-
