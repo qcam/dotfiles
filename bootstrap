@@ -8,8 +8,8 @@ function link_dotfile {
 }
 
 function move_and_link_dotfile {
-  mv ~/.$1 ~/.$1.jahuang.old
-  echo ".$1 backed up to .$1.jahuang.old"
+  mv ~/.$1 ~/.$1.qcam.old
+  echo ".$1 backed up to .$1.qcam.old"
   link_dotfile $1
 }
 
@@ -34,5 +34,4 @@ do
   fi
 done
 
-ln -sf $current/nvim ~/.config/nvim
 ln -sf $current/vim ~/.vim

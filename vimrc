@@ -1,6 +1,3 @@
-" Load all vim-plug plugins
-source ~/dotfiles/plugs.vim
-
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
@@ -15,7 +12,6 @@ if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
@@ -26,48 +22,16 @@ if executable('ag')
     \ }
 endif
 
-" Syntastic Check
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { "mode": "active",
-                               \ "passive_filetypes": ["scala"] }
-
-let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
-
-" Configure vim-airline
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 " NERDTree Settings
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 
-" Tagbar
-nmap <F8> :TagbarToggle<CR>
-let g:tagbar_type_ruby = {
-    \ 'kinds' : [
-        \ 'm:modules',
-        \ 'c:classes',
-        \ 'd:describes',
-        \ 'C:contexts',
-        \ 'f:methods',
-        \ 'F:singleton methods'
-    \ ]
-\ }
-
-" Powerline settings
-let g:airline_powerline_fonts = 1
-
 " Theme settings
 syntax on
 set lazyredraw
 set termguicolors
-set background=dark
+set background=light
 colorscheme base16-ocean
 set encoding=utf-8 nobomb
 set nowrap
@@ -96,16 +60,6 @@ let mapleader = " "
 
 " opens NerdTree
 map <Leader>n :NERDTreeToggle<CR>
-
-" *********************************
-" TEST MAPPING
-" *********************************
-nmap <silent> <Leader>r :TestNearest<CR>
-nmap <silent> <Leader>t :TestFile<CR>
-nmap <silent> <Leader>a :TestSuite<CR>
-nmap <silent> <Leader>l :TestLast<CR>
-nmap <silent> <Leader>g :TestVisit<CR>
-let test#strategy = "dispatch"
 
 nmap <Leader><Leader> <C-^>
 nmap <Leader>rr :edit!<CR>

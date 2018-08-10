@@ -1,6 +1,3 @@
-# Ignore plugged plugins
-vim/plugged
-
 .swo
 .swp
 
