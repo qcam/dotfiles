@@ -45,8 +45,6 @@ alias ll='ls -la'
 alias gh='open https://github.com/huynhquancam'
 alias fb='open https://facebook.com/huynhquancam'
 alias tt='open https://twitter.com/huynhquancam'
-alias web='open https://hqc.io'
-alias resume='open https://hqc.io/rbcv'
 
 # Ruby - Bundle
 alias bi='bundle install -j8 --path .bundle'
@@ -60,26 +58,8 @@ alias rb='rbenv'
 alias rbs='rbenv shell'
 alias rbl='rbenv local'
 
-# Node - NPM
-alias ni='npm install'
-alias nini='npm init'
-alias nr='npm run'
-alias nt='npm test'
-alias ns='npm start'
-alias ne='npm-exec'
-alias wp='npm-exec webpack'
-alias wpdev='npm-exec webpack-dev-server'
-
-# SSH
-alias ssh-tun='ssh -N -R'
-
-# Make
-alias mk='make'
-
 # dotfiles
 alias vimrc='vim ~/dotfiles/vimrc'
-alias nvimrc='vim ~/dotfiles/config/nvim/init.vim'
 alias zshrc='vim ~/dotfiles/zshrc'
 
 alias shrug='echo -n "¯\_(ツ)_/¯" | pbcopy'
-alias key='cat ~/.ssh/id_rsa.pub | pbcopy'
