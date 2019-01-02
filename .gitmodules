@@ -28,3 +28,6 @@
 [submodule "vim/pack/qcam/start/ag"]
 	path = vim/pack/qcam/start/ag
 	url = https://github.com/rking/ag.vim
+[submodule "vim/pack/qcam/opt/idris-vim"]
+	path = vim/pack/qcam/opt/idris-vim
+	url = https://github.com/idris-hackers/idris-vim

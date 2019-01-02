@@ -8,11 +8,3 @@ export NOTES_PATH="$HOME/Dropbox/Notes"
 export WORQUE_PATH="$NOTES_PATH/Todos"
 export GOPATH="$HOME:/go"
 export GPG_TTY=$(tty) # for GPG key signing
-
-# Include Python VirtualEnv & VirtualEnvWrapper
-if [ -f ~/.virtualenvs ];
-then
-  export VIRTUAL_ENV='~/.virtualenvs'
-  source /usr/local/bin/virtualenvwrapper.sh
-fi
-

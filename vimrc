@@ -28,7 +28,9 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 
 " Theme settings
-syntax on
+" syntax on
+filetype plugin on
+
 set lazyredraw
 set termguicolors
 set background=light
