@@ -7,6 +7,7 @@ nmap ga <Plug>(EasyAlign)
 " For ruby block selecting
 runtime macros/matchit.vim
 
+set rtp+=/usr/local/opt/fzf
 
 if executable('ag')
   " Use ag over grep

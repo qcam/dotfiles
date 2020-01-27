@@ -13,3 +13,5 @@ source $HOME/dotfiles/zsh/rbenv.zsh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -31,3 +31,6 @@
 [submodule "vim/pack/qcam/opt/idris-vim"]
 	path = vim/pack/qcam/opt/idris-vim
 	url = https://github.com/idris-hackers/idris-vim
+[submodule "vim/pack/qcam/start/fzf"]
+	path = vim/pack/qcam/start/fzf
+	url = https://github.com/junegunn/fzf.vim
