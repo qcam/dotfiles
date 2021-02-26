@@ -2,8 +2,8 @@
 
 [user]
 # Please adapt and uncomment the following lines:
-	name          = Cẩm Huỳnh
-	email         = huynhquancam@gmail.com
+	name = Cẩm Huỳnh
+	email = huynhquancam@gmail.com
 	signingkey    = cam@hqc.me
 [core]
 	excludesfile = /Users/cam/.gitignore_global

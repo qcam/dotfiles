@@ -34,3 +34,6 @@
 [submodule "vim/pack/qcam/start/fzf"]
 	path = vim/pack/qcam/start/fzf
 	url = https://github.com/junegunn/fzf.vim
+[submodule "vim/pack/qcam/start/vim-dispatch"]
+	path = vim/pack/qcam/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch

@@ -4,9 +4,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" For ruby block selecting
-runtime macros/matchit.vim
-
 set rtp+=/usr/local/opt/fzf
 
 if executable('ag')
@@ -29,7 +26,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 
 " Theme settings
-" syntax on
+syntax on
 filetype plugin on
 
 set lazyredraw
@@ -56,18 +53,26 @@ set t_ut= " Disable black blackground in vim
 set vb t_vb= " Disable bell
 set ruler
 
+command! -nargs=0 Format :call CocAction('format')
+
 " *********************************
 "     Leader Mappings
 " *********************************
 let mapleader = " "
+let $FZF_DEFAULT_COMMAND = 'fd --type f'
 
 " opens NerdTree
 map <Leader>n :NERDTreeToggle<CR>
+nnoremap <C-P> :Files<CR>
 
 nmap <Leader><Leader> <C-^>
 nmap <Leader>rr :edit!<CR>
 nmap <Leader>w :u<CR>
 nmap <Leader>x :wqa!<CR>
+
+nmap <Leader>t :Make %<CR>
+nmap <Leader>l :Make --failed<CR>
+nmap <Leader>f :Format<CR>
 
 nmap <Leader>x :wqa!<CR>
 noremap <Leader>s :w<CR>
