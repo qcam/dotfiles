@@ -6,7 +6,7 @@
 	email = huynhquancam@gmail.com
 	signingkey    = cam@hqc.me
 [core]
-	excludesfile = /Users/cam/.gitignore_global
+	excludesfile = /usr/local/.gitignore_local
 [filter "lfs"]
 	clean         = git-lfs clean %f
 	smudge        = git-lfs smudge %f
@@ -24,11 +24,5 @@
   squash        = rebase -i
   plr           = pull --rebase
   pick          = cherry-pick
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [credential]
 	helper = osxkeychain

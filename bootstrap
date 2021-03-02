@@ -1,37 +1,17 @@
 #!/bin/sh
 
-current=`pwd`
+DOTFILES_DIR=`pwd`
+HOME_DIR="$HOME"
 
 function link_dotfile {
-  ln -fs $current/$1 ~/.$1
-  echo ".$1 linked to ~/.$1."
-}
-
-function move_and_link_dotfile {
-  mv ~/.$1 ~/.$1.qcam.old
-  echo ".$1 backed up to .$1.qcam.old"
-  link_dotfile $1
+  ln -fs $DOTFILES_DIR/$1 $HOME_DIR/.$1
+  echo ".$1 linked to $HOME_DIR/.$1."
 }
 
 files=(zshrc vimrc zlogin tmux.conf rspec railsrc irbrc gemrc ackrc ctags gitconfig gitmessage)
 for file in "${files[@]}"
 do
-  if [ -f ~/.$file ]; then
-    while true; do
-      read -p "Do you wish to overwrite ~/.$file?: (yn) " yn
-      case $yn in
-        [Yy]* )
-          move_and_link_dotfile $file
-          break;;
-        [Nn]* )
-          echo "$file skipped."
-          break;;
-        * ) echo "Yes or No only.";;
-      esac
-    done
-  else
-    link_dotfile $file
-  fi
+  link_dotfile $file
 done
 
-ln -sf $current/vim ~/.vim
+ln -sf $DOTFILES_DIR/vim $HOME_DIR/.vim

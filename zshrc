@@ -1,17 +1,16 @@
-source $HOME/dotfiles/zsh/languages.zsh
-source $HOME/dotfiles/zsh/completions.zsh
-source $HOME/dotfiles/zsh/colors.zsh
-source $HOME/dotfiles/zsh/prompts.zsh
-source $HOME/dotfiles/zsh/hooks.zsh
-source $HOME/dotfiles/zsh/editor.zsh
-source $HOME/dotfiles/zsh/paths.zsh
-source $HOME/dotfiles/zsh/aliases.zsh
-# source /usr/local/share/zsh/site-functions/_aws
-# source $HOME/dotfiles/zsh/rbenv.zsh
+DIR=/usr/local/dotfiles
 
-# Source for ~/.zshrc.local if it exists
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
+source $DIR/zsh/languages.zsh
+source $DIR/zsh/completions.zsh
+source $DIR/zsh/functions.zsh
+source $DIR/zsh/colors.zsh
+source $DIR/zsh/prompts.zsh
+source $DIR/zsh/hooks.zsh
+source $DIR/zsh/editor.zsh
+source $DIR/zsh/paths.zsh
+source $DIR/zsh/aliases.zsh
 
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+[[ -f $HOME/.aliases.local ]] && source $HOME/.aliases.local
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
