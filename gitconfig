@@ -6,7 +6,7 @@
 	email = huynhquancam@gmail.com
 	signingkey    = cam@hqc.me
 [core]
-	excludesfile = /usr/local/.gitignore_local
+	excludesfile = /etc/.gitignore_local
 [filter "lfs"]
 	clean         = git-lfs clean %f
 	smudge        = git-lfs smudge %f
@@ -26,3 +26,5 @@
   pick          = cherry-pick
 [credential]
 	helper = osxkeychain
+[pull]
+	ff = only

@@ -1,4 +1,4 @@
-Cam Huynh's dotfiles
+My dotfiles
 ========
 
 My terminal configurations
@@ -6,17 +6,7 @@ My terminal configurations
 ### Installation
 
 ```sh
-git clone https://github.com/huynhquancam/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-./bootstrap
+git clone https://github.com/qcam/dotfiles.git /usr/local/dotfiles
+cd /usr/local/dotfiles
+. ./bootstrap
 ```
-
-### Prerequisites
-
-* `vim-plug` for vim plugin managers
-* Support NeoVIM + VIM
-* Tmux 2.2+ (with terminal-override support)
-* NeoVim 0.1.15+ (with termguicolors support)
-* VIM 7.4+ (with termguicolors support)
-* [Worque](https://github.com/huynhquancam/worque)
-

@@ -1,4 +1,4 @@
-source $HOME/dotfiles/zsh/functions.zsh
+source /usr/local/dotfiles/zsh/functions.zsh
 
 # Git world
 alias m='gco master'
@@ -40,7 +40,6 @@ alias v='/usr/local/opt/vim/bin/vim'
 
 # Utils
 alias mkdir='mkdir -p'
-alias tr='tree -L2'
 alias ll='ls -la'
 alias gh='open https://github.com/huynhquancam'
 alias fb='open https://facebook.com/huynhquancam'
@@ -54,9 +53,6 @@ alias ber='be rake'
 alias rsp='be rspec'
 alias bers='be rails server -p 8080'
 alias rbtag='ctags -f tags -R . $(bundle list --paths)'
-alias rb='rbenv'
-alias rbs='rbenv shell'
-alias rbl='rbenv local'
 
 # dotfiles
 alias vimrc='vim ~/dotfiles/vimrc'
