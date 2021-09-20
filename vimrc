@@ -4,21 +4,7 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-set rtp+=/usr/local/opt/fzf
-
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-  let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(zip|exe|so|dll)$',
-    \ }
-endif
+set rtp+=/opt/homebrew/opt/fzf
 
 " NERDTree Settings
 let g:NERDTreeShowHidden = 1
@@ -76,16 +62,9 @@ nmap <Leader>t :Make %<CR>
 nmap <Leader>l :Make --failed<CR>
 nmap <Leader>f :Format<CR>
 
-nmap <Leader>x :wqa!<CR>
-noremap <Leader>s :w<CR>
-nmap <silent> <leader>h <Plug>(coc-float-hide)
+nmap <leader>h <Plug>(coc-float-hide)
 
 inoremap <silent><expr> <c-@> coc#refresh()
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -101,6 +80,8 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
+nnoremap <C-T> :Rg<CR>
+
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -115,8 +96,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 augroup mygroup
   autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end

@@ -41,9 +41,6 @@ alias v='/usr/local/opt/vim/bin/vim'
 # Utils
 alias mkdir='mkdir -p'
 alias ll='ls -la'
-alias gh='open https://github.com/huynhquancam'
-alias fb='open https://facebook.com/huynhquancam'
-alias tt='open https://twitter.com/huynhquancam'
 
 # Ruby - Bundle
 alias bi='bundle install -j8 --path .bundle'

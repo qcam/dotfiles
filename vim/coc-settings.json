@@ -1,3 +1,5 @@
 {
-  "elixir.pathToElixirLS": "/opt/elixir-ls/release/language_server.sh"
+  "elixir.pathToElixirLS": "/opt/elixir-ls/release/language_server.sh",
+  "elixirLS.dialyzerEnabled": true,
+  "suggest.autoTrigger": "always"
 }
