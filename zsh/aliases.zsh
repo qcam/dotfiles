@@ -8,7 +8,6 @@ alias gbd='git branch -D $1'
 alias gcm='git commit'
 alias gcma='git commit --amend'
 alias gd='git diff'
-alias gdm='gd master'
 alias gst='git st'
 alias gco='git checkout'
 alias gp='git push'
@@ -22,13 +21,13 @@ alias gplrm='git plr origin master'
 alias gaa='ga -A'
 alias gag='gaa' # typing gag is faster
 
-alias pr='hub pull-request'
+alias pr='gh pr create'
 alias rename="gb -m --"
 alias pick='git pick'
 alias wip="gcm -m WIP"
 alias fixup="gcm -m fixup"
 alias fixed="gcm -m fixed"
-alias cist="hub ci-status"
+alias cist="gh pr status"
 
 # Docker
 alias drmi='docker rmi $(docker ps -aq --filter dangling=true)'

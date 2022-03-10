@@ -18,6 +18,7 @@ filetype plugin on
 set lazyredraw
 set termguicolors
 set background=light
+" let base16colorspace=256
 colorscheme base16-ocean
 set encoding=utf-8 nobomb
 set nowrap

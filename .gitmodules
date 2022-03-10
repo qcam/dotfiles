@@ -40,3 +40,6 @@
 [submodule "vim/pack/neoclide/start/coc.nvim"]
 	path = vim/pack/neoclide/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
+[submodule "vim/pack/hashivim/start/vim-terraform"]
+	path = vim/pack/hashivim/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
